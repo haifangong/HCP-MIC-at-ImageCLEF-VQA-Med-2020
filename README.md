@@ -51,9 +51,9 @@ Here is an example.
                     {
                         'image_id': 1,
                         'fpath': '/home/data/train1920/images/synpic593.jpg',
-                        'im_height': 600,
-                        'im_width': 800,
-                        'category_id': 7477
+                        'im_height': 432,
+                        'im_width': 688,
+                        'category_id': 18
                     },
                     ...
                    ]
