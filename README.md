@@ -1,6 +1,4 @@
 ## HCP-MIC at ImageCLEF VQA-Med 2020
-Guanqi chen, Haifan Gong, Guanbin Li*
-
 This repository is the official implementation of paper [HCP-MIC at VQA-Med 2020: Effective Visual Representation for Medical Visual Quesion Answering].
 
 ## Main requirements
@@ -10,22 +8,19 @@ This repository is the official implementation of paper [HCP-MIC at VQA-Med 2020
   * **tensorboardX == 2.0**
   * **Python 3**
 
-## Pretrain models and data for VQA-Med 2020
+## Pretrain models for VQA-Med 2020
 
 We provide the pretrain models of both medical images classifier and medical questions classifier for VQA-Med 2020.
 These models should be under the ```BBN-BioBert-Inference/pretrain``` folder.
 
-[Baidu Cloud](https://pan.baidu.com/s/)
+[Baidu Cloud](https://pan.baidu.com/s/1LX9NZ66PLnacqhZSo7mXvg) code:93nw
 
-The BBN is mainly modified from [BBN](https://github.com/Megvii-Nanjing/BBN)
-Bio-Bert pretrain is obtained from [Biobert](https://github.com/dmis-lab/biobert), the pickle data should be under the ```BBN-BioBert-Inference/data``` folder.
+The BBN is mainly modified from [BBN](https://github.com/Megvii-Nanjing/BBN), Bio-Bert pretrain is obtained from [Biobert](https://github.com/dmis-lab/biobert), the pickle data should be under the ```BBN-BioBert-Inference/data/``` folder. 
 
 ## Usage
 ```bash
 # To train long-tailed abnormal images classification with BBN-ResNeSt-50:
 python BBN/main/train.py  --cfg BBN/configs/BBN-ResNeSt-50.yaml     
-
-It is worth noting that to obtain a better score, we further adjust the BASE_LR to 0.06 to fineturn the model.
 
 # To train medical questions classification with bio-bert:
 cd BioBert
@@ -37,6 +32,25 @@ python inference.py
 ```
 
 You can change the experimental setting by simply modifying the parameter in the yaml file.
+
+## Tools
+
+```bash
+# Get json from the original format of VQA-MED 2020
+python BBN/txt2json.py
+
+# Create cache for VQA
+python BBN/create_cache4VQA.py
+
+# Create pickel for inference
+python BBN/bbn_create_pickel.py
+
+# Expanding dataset via KL divergence
+python BBN/expand_dataset.py
+
+# Create feature dict
+python BBN-Biobert-Inference/create_feature_dict.py
+```
 
 ## Data format
 
@@ -51,9 +65,9 @@ Here is an example.
                     {
                         'image_id': 1,
                         'fpath': '/home/data/train1920/images/synpic593.jpg',
-                        'im_height': 432,
-                        'im_width': 688,
-                        'category_id': 18
+                        'im_height': 600,
+                        'im_width': 800,
+                        'category_id': 74
                     },
                     ...
                    ]
@@ -63,19 +77,6 @@ Here is an example.
 You can use the following code to convert from the original format of VQA-Med. 
 The images and annotations can be downloaded at [VQA-MED 2020](https://www.aicrowd.com/challenges/imageclef-2020-vqa-med-vqa)
 
-```bash
-# Get json from the original format of VQA-MED 2020
-python BBN/txt2json.py
-
-# Create cache for VQA
-python BBN/create_cache4VQA.py
-
-# Create pickel for inference
-python BBN/bbn_create_pickel.py
-
-# Expanding dataset via KL divergence
-python BBN/expand_dataset.py
-```
 
 ## Citing this repository
 If you find this code useful in your work, please consider citing us:
@@ -93,4 +94,3 @@ If you find this code useful in your work, please consider citing us:
 If you have any questions about our work, please do not hesitate to contact us by emails.
 
 Haifan Gong: haifangong@outlook.com
-
