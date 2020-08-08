@@ -1,6 +1,18 @@
 ## HCP-MIC at ImageCLEF VQA-Med 2020
 This repository is the official implementation of paper [HCP-MIC at VQA-Med 2020: Effective Visual Representation for Medical Visual Quesion Answering].
 
+## Citing this repository
+If you find this code useful in your work, please consider citing us:
+
+```
+@inproceedings{chen2020hcp-mic,
+	title={HCP-MIC at VQA-Med 2020: Effective Visual Representation for Medical Visual Quesion Answering},
+	author={Guanqi Chen and Haifan Gong and Guanbin Li},
+	booktitle={CLEF (Working notes)},
+	year={2020}
+}
+```
+
 ## Main requirements
 
   * **torch == 1.4.0**
@@ -77,18 +89,6 @@ Here is an example.
 You can use the following code to convert from the original format of VQA-Med. 
 The images and annotations can be downloaded at [VQA-MED 2020](https://www.aicrowd.com/challenges/imageclef-2020-vqa-med-vqa)
 
-
-## Citing this repository
-If you find this code useful in your work, please consider citing us:
-
-```
-@inproceedings{chen2020hcp-mic,
-	title={HCP-MIC at VQA-Med 2020: Effective Visual Representation for Medical Visual Quesion Answering},
-	author={Guanqi Chen and Haifan Gong and Guanbin Li},
-	booktitle={CLEF (Working notes)},
-	year={2020}
-}
-```
 
 ## Contacts
 If you have any questions about our work, please do not hesitate to contact us by emails.
