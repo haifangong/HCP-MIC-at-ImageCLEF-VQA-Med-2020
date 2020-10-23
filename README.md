@@ -1,5 +1,5 @@
 ## HCP-MIC at ImageCLEF VQA-Med 2020
-This repository is the official implementation of paper [HCP-MIC at VQA-Med 2020: Effective Visual Representation for Medical Visual Quesion Answering].
+This repository is the official implementation of paper [HCP-MIC at VQA-Med 2020: Effective Visual Representation for Medical Visual Quesion Answering](http://ceur-ws.org/Vol-2696/paper_74.pdf).
 
 ## Citing this repository
 If you find this code useful in your work, please consider citing us:
