@@ -21,7 +21,7 @@ def get_arguments():
     parser.add_argument('-bert_mode', type=str, default='base', choices=['base', 'l', 'xl', 'xxl'])
     parser.add_argument('-bert_pretrain', type=str, default='../BBN-BioBert-Inference/pretrain/biobert_v1.1_pubmed')
     parser.add_argument('-num_classes', type=int, default=3)
-    parser.add_argument('-dictionary_path', type=str, default='../BBN-BioBert-Inference/data_CLEF/dictionary.pkl')
+    parser.add_argument('-dictionary_path', type=str, default='../BBN-BioBert-Inference/data/dictionary.pkl')
     parser.add_argument('-data_root', type=str, default='./data')
 
     # Training setting
